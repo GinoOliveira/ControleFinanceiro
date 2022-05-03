@@ -1,0 +1,17 @@
+.griditem{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 1000px;
+    margin: 0 20px;
+    justify-content: space-around;
+}
+
+.svg {
+    width: 18px;
+    height: 18px;
+}
+
+.col-sm-3 {
+    display: flex;
+}
