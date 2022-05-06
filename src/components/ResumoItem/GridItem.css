@@ -1,10 +1,16 @@
 .griditem{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50vh;
+  padding: 10px;
+}
+
+.td {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 1000px;
-    margin: 0 20px;
-    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vh;
 }
 
 .svg {
@@ -12,6 +18,3 @@
     height: 18px;
 }
 
-.col-sm-3 {
-    display: flex;
-}

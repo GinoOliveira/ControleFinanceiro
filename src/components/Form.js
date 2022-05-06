@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import './Form.css'
 import Grid from './ResumoItem/Grid'
+import Tabela from './ResumoItem/Tabela'
 
 
 
@@ -19,8 +20,6 @@ const Form = ({handleAdd, transactionsList, setTransactionsList}) =>{
         }else if(amount < 1){
             alert("O valor tem que ser positivo")
             return
-        }else{
-            alert("Itens inserido com sucesso!")
         }
 
         const transaction = {
@@ -41,7 +40,7 @@ const Form = ({handleAdd, transactionsList, setTransactionsList}) =>{
       <div>
         <div className='form'>
                 <label>Descrição</label>
-                <input placeholder='Compreas ou ganhos' className='input' value={desc} onChange={(e) => setDesc(e.target.value)}  />
+                <input placeholder='Compras ou ganhos' className='input' value={desc} onChange={(e) => setDesc(e.target.value)}  />
                 <label>Valor</label>
                 <input placeholder='Valores entrada ou saida' className='input' type="number" value={amount} onChange={(e) => setAmount(e.target.value)}  />
 
@@ -54,6 +53,8 @@ const Form = ({handleAdd, transactionsList, setTransactionsList}) =>{
                 <button onClick={handleSave} className='button'>Adicionar</button>  
         </div>
         <Grid itens={transactionsList} setItens={setTransactionsList} />
+        
+        
       </div>
     )
 }

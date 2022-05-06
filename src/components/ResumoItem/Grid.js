@@ -1,8 +1,9 @@
 import React from 'react'
-import './Grid.css'
+import './GridStyle.css'
 import './GridItem'
 import GridItem from './GridItem'
 import Tabela from './Tabela'
+
 
 const Grid = ({ itens, setItens}) =>{
     const onDelete = (ID) => { 
@@ -11,20 +12,24 @@ const Grid = ({ itens, setItens}) =>{
     localStorage.setItem("transactions", JSON.stringify(newArray))
     }
     return(
-        <div className='grid'>
-            <thead className=''>
-                <tr className='' >
-                    <th >Descrição </th>
-                    <th > Valor</th>
-                   
-                </tr>
-            </thead>
-            <tbody>
-                {itens?.map((item, index) => (
-                    <GridItem key={index} item={item} onDelete={onDelete}/>
-                ))}
-            </tbody>
-        </div>
+
+        <div className="grid-container" > 
+        
+        <thead>
+          <tr>
+            
+            <th className='th' >Descrição</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+          {itens?.map((item, index) => (
+            <GridItem key={index} item={item} onDelete={onDelete} />
+          ))}
+        </tbody>
+      
+      </div>
     )
 }
 

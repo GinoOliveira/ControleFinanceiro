@@ -1,4 +1,4 @@
-import styled from "styled-components"
+
 import './GridItem.css'
 import {FaRegArrowAltCircleUp, 
     FaRegArrowAltCircleDown, 
@@ -7,16 +7,16 @@ import {FaRegArrowAltCircleUp,
     const GridItem = ({ item, onDelete }) => {
         return (
             <tr className="griditem">
-                <td>{item.desc}</td>
-                <td>{item.amount}</td>
-                <td alignCenter>
+                <td className='td'>{item.desc}</td>
+                <td className='td'>{item.amount}</td>
+                <td className='td'>
                     {item.expense ? (
                         <FaRegArrowAltCircleDown color="red"/>
                     ) : (
                         <FaRegArrowAltCircleUp color="green"/>
                     )}
                 </td>
-                <td alignCenter> 
+                <td > 
                 <FaTrash onClick={() => onDelete(item.id)} />
                 </td>
             </tr>
